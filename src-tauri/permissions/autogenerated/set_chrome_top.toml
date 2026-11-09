@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-chrome-top"
+description = "Enables the set_chrome_top command without any pre-configured scope."
+commands.allow = ["set_chrome_top"]
+
+[[permission]]
+identifier = "deny-set-chrome-top"
+description = "Denies the set_chrome_top command without any pre-configured scope."
+commands.deny = ["set_chrome_top"]

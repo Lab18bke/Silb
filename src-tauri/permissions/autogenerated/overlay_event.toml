@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-overlay-event"
+description = "Enables the overlay_event command without any pre-configured scope."
+commands.allow = ["overlay_event"]
+
+[[permission]]
+identifier = "deny-overlay-event"
+description = "Denies the overlay_event command without any pre-configured scope."
+commands.deny = ["overlay_event"]

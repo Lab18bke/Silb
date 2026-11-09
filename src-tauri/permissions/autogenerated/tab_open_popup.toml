@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-tab-open-popup"
+description = "Enables the tab_open_popup command without any pre-configured scope."
+commands.allow = ["tab_open_popup"]
+
+[[permission]]
+identifier = "deny-tab-open-popup"
+description = "Denies the tab_open_popup command without any pre-configured scope."
+commands.deny = ["tab_open_popup"]

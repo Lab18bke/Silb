@@ -1,0 +1,258 @@
+:root {
+  --font-ui: 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Source Serif 4 Variable', 'Sitka Display', Georgia, serif;
+  --font-mono: 'Cascadia Mono', Consolas, monospace;
+
+  --frame: #f2f1ed;
+  --surface: #fbfbf9;
+  --raised: #ffffff;
+  --sunken: #ebeae5;
+  --hover: rgba(29, 29, 27, 0.06);
+  --press: rgba(29, 29, 27, 0.1);
+  --ink: #1d1d1b;
+  --ink-2: #4a4945;
+  --muted: #6b6963;
+  --faint: #9a978f;
+  --line: #e1dfd9;
+  --line-strong: #cfccc4;
+  --danger: #b3261e;
+  --warn: #9a5b00;
+  --ok: #2e6b5e;
+  --shadow-pop: 0 1px 2px rgba(20, 20, 18, 0.06), 0 6px 18px rgba(20, 20, 18, 0.12);
+  --icon-shadow: rgba(0, 0, 0, 0.24);
+  --icon-gloss: rgba(255, 255, 255, 0.5);
+  --icon-glass: 0.12;
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 6.5 8 10l3.5-3.5' fill='none' stroke='%236b6963' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --accent-base: #2e6b5e;
+  --accent: var(--accent-base);
+  --accent-soft: color-mix(in oklab, var(--accent) 12%, transparent);
+  --accent-ink: #ffffff;
+  --focus: color-mix(in oklab, var(--accent) 60%, transparent);
+
+  --tabbar-h: 40px;
+  --toolbar-h: 46px;
+  --control-h: 32px;
+  --radius-s: 6px;
+  --radius-m: 9px;
+  --radius-l: 14px;
+
+  color-scheme: light;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--frame);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-density='compact'] {
+  --tabbar-h: 34px;
+  --toolbar-h: 40px;
+  --control-h: 28px;
+}
+
+:root[data-accent='ink'] { --accent-base: #34509a; }
+:root[data-accent='clay'] { --accent-base: #9c5536; }
+:root[data-accent='plum'] { --accent-base: #74467a; }
+:root[data-accent='graphite'] { --accent-base: #4a4a46; }
+
+:root[data-theme='dark'] {
+  --frame: #1a1a19;
+  --surface: #232321;
+  --raised: #2b2b29;
+  --sunken: #161615;
+  --hover: rgba(235, 233, 228, 0.07);
+  --press: rgba(235, 233, 228, 0.12);
+  --ink: #ebe9e4;
+  --ink-2: #c9c6bf;
+  --muted: #9b988f;
+  --faint: #6f6c66;
+  --line: #34332f;
+  --line-strong: #46443f;
+  --danger: #f2817a;
+  --warn: #e7b25f;
+  --ok: #86bbac;
+  --shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.42);
+  --icon-shadow: rgba(0, 0, 0, 0.7);
+  --icon-gloss: rgba(255, 255, 255, 0.9);
+  --icon-glass: 0.16;
+  --accent: color-mix(in oklab, var(--accent-base) 55%, #eaf4f0);
+  --accent-ink: #141413;
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 6.5 8 10l3.5-3.5' fill='none' stroke='%239b988f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+:root[data-accent='graphite'][data-theme='dark'] { --accent: #cfccc4; }
+
+:root[data-private='true'] {
+  --frame: #1c1a21;
+  --surface: #25222c;
+  --raised: #2d2a35;
+  --sunken: #17151b;
+  --hover: rgba(236, 232, 245, 0.07);
+  --press: rgba(236, 232, 245, 0.12);
+  --ink: #ece8f5;
+  --ink-2: #cbc5d8;
+  --muted: #9d96ad;
+  --faint: #6f6980;
+  --line: #36323f;
+  --line-strong: #4a4555;
+  --danger: #f2817a;
+  --warn: #e7b25f;
+  --ok: #a9c9bd;
+  --shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.48);
+  --icon-shadow: rgba(0, 0, 0, 0.7);
+  --icon-gloss: rgba(255, 255, 255, 0.9);
+  --icon-glass: 0.16;
+  --accent: #b6a6e6;
+  --accent-ink: #17151b;
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 6.5 8 10l3.5-3.5' fill='none' stroke='%239d96ad' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+html:has(body.overlay-body),
+body.overlay-body {
+  background: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: default;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 28%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+input::placeholder {
+  color: var(--faint);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.btn {
+  height: var(--control-h);
+  padding: 0 14px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line-strong);
+  background: var(--raised);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.btn:hover {
+  background: color-mix(in oklab, var(--raised) 92%, var(--ink));
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: transparent;
+  color: var(--accent-ink);
+}
+
+.btn.primary:hover {
+  background: color-mix(in oklab, var(--accent) 88%, var(--ink));
+}
+
+.btn.danger {
+  color: var(--danger);
+}
+
+.btn.quiet {
+  border-color: transparent;
+  background: transparent;
+}
+
+.btn.quiet:hover {
+  background: var(--hover);
+}
+
+.field {
+  height: var(--control-h);
+  padding: 0 10px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--line-strong);
+  background: var(--raised);
+  outline: none;
+  min-width: 0;
+}
+
+.field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+select.field {
+  appearance: none;
+  padding: 0 30px 0 11px;
+  background-image: var(--chevron);
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  background-size: 14px;
+  color: var(--ink);
+  transition: border-color 0.12s, background-color 0.12s;
+}
+
+select.field:hover {
+  border-color: color-mix(in oklab, var(--line-strong) 60%, var(--ink));
+}
+
+select.field option {
+  background: var(--raised);
+  color: var(--ink);
+}
+
+.scroll {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

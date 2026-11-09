@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-site-settings-list"
+description = "Enables the site_settings_list command without any pre-configured scope."
+commands.allow = ["site_settings_list"]
+
+[[permission]]
+identifier = "deny-site-settings-list"
+description = "Denies the site_settings_list command without any pre-configured scope."
+commands.deny = ["site_settings_list"]
